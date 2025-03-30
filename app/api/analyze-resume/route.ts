@@ -36,7 +36,7 @@ export async function POST(request: Request) {
     console.log('Fetching resume text...');
     const resumeText = await getResumeText();
 
-    const prompt = `You are a job applicant.Based on your resume text, please answer this question: "${question}"\n\nResume text:\n${resumeText}.`;
+    const prompt = `You are a job applicant.Based on your resume text, please answer this question: "${question}"\n\nResume text:\n${resumeText}. Be concise and to the point. Use casual tone.`;
 
     const openaiResponse = await fetch(`${OPENAI_API_URL}/chat/completions`, {
       method: 'POST',
