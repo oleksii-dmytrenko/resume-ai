@@ -51,6 +51,7 @@ export async function POST(request: Request) {
     });
 
     const openaiData = await openaiResponse.json();
+    console.log("openaiData", openaiData);
 
     const answer = openaiData.choices[0].message.content;
 
