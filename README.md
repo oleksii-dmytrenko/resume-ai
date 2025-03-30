@@ -42,7 +42,7 @@ The API endpoint is available at `/api/generate`. Send a POST request with the f
 ```json
 {
   "prompt": "Your prompt here",
-  "model": "gpt-3.5-turbo" // optional, defaults to gpt-3.5-turbo
+  "model": "gpt-4o-mini"
 }
 ```
 
