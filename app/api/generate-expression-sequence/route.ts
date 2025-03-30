@@ -59,7 +59,7 @@ export async function POST(request: Request) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.TF_VAR_leonardo_api_key}`,
+        'Authorization': `Bearer ${process.env.LEONARDO_API_KEY}`,
       },
       body: JSON.stringify({
         prompt: EXPRESSION.prompt,
@@ -84,7 +84,7 @@ export async function POST(request: Request) {
     while (true) {
       const statusResponse = await fetch(`${LEONARDO_API_URL}/generations/${generationId}`, {
         headers: {
-          'Authorization': `Bearer ${process.env.TF_VAR_leonardo_api_key}`,
+          'Authorization': `Bearer ${process.env.LEONARDO_API_KEY}`,
         },
       });
       
